@@ -50,7 +50,7 @@ export default function Button({
             )}
 
             {rightIcon && (
-                <span className="transition-transform duration-300 group-hover:translate-x-1">
+                <span className="transition-transform duration-300 pl-1">
                     {rightIcon}
                 </span>
             )}
