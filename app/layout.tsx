@@ -3,7 +3,7 @@ import { Geist_Mono, Inter } from "next/font/google";
 import localFont from "next/font/local";
 
 import Footer from "@/components/layout/footer";
-
+import SmoothScroll from "@/components/providers/SmoothScroll";
 
 import "./globals.css";
 import Navbar from "@/components/layout/Navbar";
@@ -65,20 +65,16 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${inter.variable} ${gambetta.variable} h-full overflow-x-hidden antialiased `}
+      className={`${inter.variable} ${gambetta.variable} h-full antialiased`}
     >
-      <body className="relative flex min-h-full flex-col">
-        {/* <a
-          href="#main-content"
-          className="sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:z-[100] focus:rounded-md focus:bg-zinc-900 focus:px-4 focus:py-2 focus:text-sm focus:font-medium focus:text-white dark:focus:bg-zinc-50 dark:focus:text-zinc-900"
-        >
-          Skip to main content
-        </a> */}
-        <Navbar />
-        <main id="main-content" className="flex flex-1 flex-col ">
-          {children}
-        </main>
-        {/* <Footer /> */}
+      <body className="relative flex min-h-full flex-col overflow-x-hidden">
+        <SmoothScroll>
+          <Navbar />
+          <main id="main-content" className="flex flex-1 flex-col overflow-x-hidden">
+            {children}
+          </main>
+          {/* <Footer /> */}
+        </SmoothScroll>
       </body>
     </html>
   );

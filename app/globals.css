@@ -1,4 +1,5 @@
 @import "tailwindcss";
+@import "lenis/dist/lenis.css";
 
 :root {
   --background: #020209;
@@ -21,12 +22,41 @@
   }
 }
 
+html {
+  overflow-x: hidden;
+  scroll-behavior: auto;
+}
+
 body {
   background: var(--background);
   color: var(--foreground);
   font-family: var(--font-inter);
+  overflow-x: hidden;
+  width: 100%;
+  max-width: 100vw;
 }
 
 .font-gambetta {
   font-family: var(--font-gambetta);
+}
+
+html.lenis,
+html.lenis body {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+.lenis.lenis-smooth iframe {
+  pointer-events: none;
 }
