@@ -4,6 +4,9 @@ export type Route = {
 };
 
 export const routes: Route[] = [
-  { href: "/", label: "Home" },
-  { href: "/about", label: "About" },
+  // { href: "/", label: "Home" },
+  { href: "/about", label: "Templates" },
+  { href: "/live", label: "Live examples" },
+  { href: "/support", label: "Support" },
+  { href: "/blog", label: "Blog" },
 ];
