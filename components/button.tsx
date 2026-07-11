@@ -11,7 +11,8 @@ interface ButtonProps {
     textColor?: string;
     rounded?: boolean;
     fullWidth?: boolean;
-
+    paddingX?: string;
+    paddingY?: string;
     // Icon
     rightIcon?: ReactNode;
 
@@ -28,6 +29,9 @@ export default function Button({
     textColor = "text-white",
     rounded = false,
     fullWidth = false,
+    paddingX = "px-5",
+    paddingY = "py-3",
+
     rightIcon,
     animation = true,
 }: ButtonProps) {
@@ -62,9 +66,9 @@ export default function Button({
         gap-2
         overflow-hidden
         transition-all
-        duration-300
-        px-6
-        py-3
+        duration-300    
+        ${paddingX}
+        ${paddingY}
         ${bgColor}
         ${textColor}
         ${rounded ? "rounded-md" : ""}
