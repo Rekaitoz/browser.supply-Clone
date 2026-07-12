@@ -4,6 +4,7 @@ import { FaArrowRightLong } from "react-icons/fa6";
 import { templates } from "@/data/templates";
 import { getBadgeClass } from "@/lib/badge";
 import Image from "next/image";
+import FadeIn3D from "@/components/animations/FadeIn3D";
 
 export default function Template() {
 
@@ -15,7 +16,7 @@ export default function Template() {
       >
         <section className="w-full flex flex-col tablet:flex-row gap-8 tablet:items-end justify-between px-5 tablet:px-10 pt-10 tablet:pt-16 desktop:pt-20 pb-10 border-b border-[#212121]">
           <div className="w-full max-w-lg pt-2 text-left space-y-4">
-            <FadeIn y={10} blur={8} duration={4}>
+            <FadeIn y={13} blur={0} duration={2}>
               <h1
                 id="home-heading"
                 className="font-gambetta text-[38px] tablet:text-[48px] desktop:text-[56px] font-medium leading-[1.02] tracking-tight text-white"
@@ -25,13 +26,13 @@ export default function Template() {
               </h1>
             </FadeIn>
 
-            <FadeIn y={13} blur={8} duration={2} delay={0.45}>
+            <FadeIn y={13} blur={0} duration={2} >
               <p className="w-full max-w-xl text-[15px] leading-7 text-[#ABABAB] tablet:text-[17px] tablet:leading-8">
                 Pick a template, swap in your content, and go live. Your business website can be up and running this afternoon.
               </p>
             </FadeIn>
           </div>
-          <FadeIn y={13} blur={0} duration={1} delay={0.9}>
+          <FadeIn y={13} blur={0} duration={2}>
             <Button
               className="text-[16px] font-bold w-full tablet:w-auto"
               rounded
@@ -48,38 +49,40 @@ export default function Template() {
             <div
               key={template.id}
               className={`
-          group
-    flex flex-col
-    px-8
-    py-10
-    transition-colors
-    duration-300
-    gap-8
-    bg-[rgba(43,43,43,0)]
-    hover:bg-[rgba(43,43,43,0.5)]
-
-    border-[#212121]
-    first:border-r
-    last:border-l
-    cursor-pointer
-        `}
+                group
+                flex flex-col
+                px-8
+                py-10
+                transition-colors
+                duration-300
+                gap-8
+                bg-[rgba(43,43,43,0)]
+              hover:bg-[rgba(43,43,43,0.5)]
+              border-[#212121]
+                first:border-r
+                last:border-l
+                cursor-pointer
+                `}
             >
-              <div className="relative aspect-16/10 w-full ">
-                <Image
-                  src={template.image}
-                  alt={template.name}
-                  fill
-                  className="
-      object-cover
-      rounded-sm
-      overflow-hidden
-      transition-transform
-      duration-700
-      ease-[cubic-bezier(0.22,1,0.36,1)]
-      hover:-translate-y-4
-    "
-                />
-              </div>
+              <FadeIn3D>
+                <div className="relative aspect-16/10 w-full ">
+                  <Image
+                    src={template.image}
+                    alt={template.name}
+                    fill
+                    className="
+                    object-cover
+                    rounded-sm
+                    overflow-hidden
+                    transition-transform
+                    duration-700
+                    ease-[cubic-bezier(0.22,1,0.36,1)]
+                    hover:-translate-y-4
+                    "
+                  />
+                </div>
+              </FadeIn3D>
+
               <FadeIn y={10} blur={0} duration={1.5} className="space-y-3">
                 <div className="flex items-center gap-x-5">
                   <h2 className="font-gambetta text-[32px] tablet:text-[36px] desktop:text-[28px] text-white">
