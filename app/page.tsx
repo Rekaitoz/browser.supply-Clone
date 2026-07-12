@@ -1,5 +1,6 @@
 import HeroBackground from "@/components/background/HeroBackground";
 import TemplateBackground from "@/components/background/TemplateBackground";
+import Benefits from "@/features/home/components/Benefits";
 import Demo from "@/features/home/components/Demo";
 import Hero from "@/features/home/components/Hero";
 import Stats from "@/features/home/components/Stats";
@@ -19,5 +20,7 @@ export default function HomePage() {
     <Stats />
 
     <Template />
+
+    <Benefits />
   </main>;
 }

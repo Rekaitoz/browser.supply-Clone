@@ -11,13 +11,12 @@ export default function TemplateBackground() {
         absolute
         -z-10
         max-w-none
-       
         rotate-70
-        top-[646px]
+        top-[1200px]
         blur-3xl
-        
+        translate-x-[-30%]
         tablet:left-1/2
-        tablet:top-[-800px]
+        tablet:top-[1200px]
         desktop:top-[1200px]
       "
     />
