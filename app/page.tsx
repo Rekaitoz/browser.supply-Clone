@@ -9,6 +9,7 @@ import Process from "@/features/home/components/Process";
 import Stats from "@/features/home/components/Stats";
 import Template from "@/features/home/components/Template";
 import Testimonial from "@/features/home/components/Testimonial";
+import TryQuiz from "@/features/home/components/TryQuiz";
 
 export default function HomePage() {
   return <main className="relative overflow-x-hidden overflow-y-hidden">
@@ -34,5 +35,7 @@ export default function HomePage() {
     <Testimonial />
 
     <Pricing />
+
+    <TryQuiz />
   </main>;
 }
