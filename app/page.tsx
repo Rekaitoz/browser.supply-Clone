@@ -4,6 +4,7 @@ import Benefits from "@/features/home/components/Benefits";
 import Demo from "@/features/home/components/Demo";
 import Framer from "@/features/home/components/Framer";
 import Hero from "@/features/home/components/Hero";
+import Pricing from "@/features/home/components/Pricing";
 import Process from "@/features/home/components/Process";
 import Stats from "@/features/home/components/Stats";
 import Template from "@/features/home/components/Template";
@@ -31,5 +32,7 @@ export default function HomePage() {
     <Process />
 
     <Testimonial />
+
+    <Pricing />
   </main>;
 }
