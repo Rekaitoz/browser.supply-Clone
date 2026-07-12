@@ -35,7 +35,7 @@ export default function Navbar() {
         : "grid-rows-[auto_0fr] h-auto mask-[linear-gradient(to_bottom,black_50%,transparent_100%)] duration-1000"
         }`}
     >
-      <div className="relative py-4 px-10">
+      <div className="relative py-4 px-0 tablet:px-10">
         <div className="mx-auto flex w-full px-10 max-w-md tablet:max-w-4xl desktop:max-w-[1440px] items-center justify-between">
           <div className="flex min-w-0 items-center">
             <Image
