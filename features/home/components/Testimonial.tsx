@@ -1,7 +1,13 @@
 import FadeIn from "@/components/animations/FadeIn";
 import Button from "@/components/Button";
 
-export default function Testimonial() {
+interface TestimonialProps {
+  reverse?: boolean;
+}
+
+export default function Testimonial({
+  reverse = false }: TestimonialProps
+) {
 
   return (
     <section className="relative mx-auto w-full max-w-[100vw] overflow-x-hidden overflow-hidden border-b border-[#212121] px-4 tablet:px-6 desktop:px-10 mb-5">
@@ -9,7 +15,10 @@ export default function Testimonial() {
         aria-labelledby="home-heading"
         className="relative mx-auto grid grid-cols-1 tablet:grid-cols-2 w-full flex-col items-center border border-[#212121] border-y-0 font-sans max-w-md tablet:max-w-4xl desktop:max-w-[1440px]"
       >
-        <section className="mx-auto flex w-full flex-col items-start justify-center p-10 h-full border-b tablet:border-b-0 tablet:border-r border-[#212121]">
+        <section className={`mx-auto flex w-full flex-col items-start justify-center p-10 h-full ${reverse
+          ? "tablet:order-2 tablet:border-l tablet:border-r-0"
+          : "tablet:order-1 tablet:border-r tablet:border-l-0"} 
+          border-[#212121]`}>
           <FadeIn y={-13} blur={0} duration={1} delay={0.5}>
             <span className="flex items-center gap-x-2 rounded-sm bg-[radial-gradient(86%_150%_at_47%,#fff0_0%,#fff3_100%)] px-4 py-1.5 text-[12px] font-bold text-[#ababab]">
               CUSTOMER SUCCESS
@@ -60,7 +69,7 @@ export default function Testimonial() {
             </Button>
           </FadeIn>
         </section>
-        <FadeIn y={10} blur={0} duration={2} className="h-full">
+        <FadeIn y={10} blur={0} duration={2} className={`h-full ${reverse ? "tablet:order-1" : "tablet:order-2"}`}>
           <video
             className=" h-full w-full object-cover"
             autoPlay

@@ -25,23 +25,19 @@ export const heroData: Record<string, HeroData> = {
   "/templates": {
     badge: {
       text: "FRAMER TEMPLATES",
+      icon: true,
     },
 
     title: (
       <>
-        Browse p<em>r</em>emi<em>u</em>m
+        Bro<em>w</em>se pre<em>m</em>ium
         <br />
-        websi<em>t</em>e temp<em>l</em>ates
+        we<em>b</em>site te<em>m</em>pla<em>t</em>es
       </>
     ),
 
     description:
-      "Find the perfect Framer template for your next website.",
-
-    button: {
-      name: "View Templates",
-      path: "/templates",
-    },
+      "View our collection of premium Framer templates and launch your website in hours, not months.",
   },
 
   "/blog": {

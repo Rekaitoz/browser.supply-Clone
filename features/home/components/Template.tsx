@@ -6,46 +6,60 @@ import { getBadgeClass } from "@/lib/badge";
 import Image from "next/image";
 import FadeIn3D from "@/components/animations/FadeIn3D";
 
-export default function Template() {
+interface TemplateProps {
+  showHeader?: boolean;
+  limit?: number;
+}
+
+export default function Template({
+  showHeader = true,
+  limit,
+}: TemplateProps) {
+
+  const displayedTemplates = limit
+    ? templates.slice(0, limit)
+    : templates;
 
   return (
-    <section className="relative mx-auto w-full max-w-[100vw] overflow-x-hidden overflow-hidden border-b border-[#212121] px-4 tablet:px-6 desktop:px-10 mb-5">
+    <section className="relative mx-auto w-full max-w-[100vw] overflow-x-hidden overflow-hidden border-b border-[#212121] px-4 tablet:px-6 desktop:px-10">
       <section
         aria-labelledby="home-heading"
         className="relative mx-auto flex w-full flex-col items-center border border-[#212121] border-y-0 font-sans max-w-md tablet:max-w-4xl desktop:max-w-[1440px]"
       >
-        <section className="w-full flex flex-col tablet:flex-row gap-8 tablet:items-end justify-between px-5 tablet:px-10 pt-10 tablet:pt-16 desktop:pt-20 pb-10 border-b border-[#212121]">
-          <div className="w-full max-w-lg pt-2 text-left space-y-4">
+        {showHeader && (
+          <section className="w-full flex flex-col tablet:flex-row gap-8 tablet:items-end justify-between px-5 tablet:px-10 pt-10 tablet:pt-16 desktop:pt-20 pb-10 border-b border-[#212121]">
+            <div className="w-full max-w-lg pt-2 text-left space-y-4">
+              <FadeIn y={13} blur={0} duration={2}>
+                <h1
+                  id="home-heading"
+                  className="font-gambetta text-[38px] tablet:text-[48px] desktop:text-[56px] font-medium leading-[1.02] tracking-tight text-white"
+                >
+                  Pre<em>m</em>ium tem<em>p</em>lat<em>e</em>s b<em>u</em>ilt to dri<em>v</em>e <em>r</em>esul<em>t</em>s
+
+                </h1>
+              </FadeIn>
+
+              <FadeIn y={13} blur={0} duration={2} >
+                <p className="w-full max-w-xl text-[15px] leading-7 text-[#ABABAB] tablet:text-[17px] tablet:leading-8">
+                  Pick a template, swap in your content, and go live. Your business website can be up and running this afternoon.
+                </p>
+              </FadeIn>
+            </div>
             <FadeIn y={13} blur={0} duration={2}>
-              <h1
-                id="home-heading"
-                className="font-gambetta text-[38px] tablet:text-[48px] desktop:text-[56px] font-medium leading-[1.02] tracking-tight text-white"
+              <Button
+                className="text-[16px] font-bold w-full tablet:w-auto"
+                rounded
+                rightIcon={<FaArrowRightLong size={10} />}
+                textColor="text-black"
+                bgColor="bg-[#ffffff]"
               >
-                Pre<em>m</em>ium tem<em>p</em>lat<em>e</em>s b<em>u</em>ilt to dri<em>v</em>e <em>r</em>esul<em>t</em>s
-
-              </h1>
+                View All
+              </Button>
             </FadeIn>
-
-            <FadeIn y={13} blur={0} duration={2} >
-              <p className="w-full max-w-xl text-[15px] leading-7 text-[#ABABAB] tablet:text-[17px] tablet:leading-8">
-                Pick a template, swap in your content, and go live. Your business website can be up and running this afternoon.
-              </p>
-            </FadeIn>
-          </div>
-          <FadeIn y={13} blur={0} duration={2}>
-            <Button
-              className="text-[16px] font-bold w-full tablet:w-auto"
-              rounded
-              rightIcon={<FaArrowRightLong size={10} />}
-              textColor="text-black"
-              bgColor="bg-[#ffffff]"
-            >
-              View All
-            </Button>
-          </FadeIn>
-        </section>
+          </section>
+        )}
         <section className="grid grid-cols-1 tablet:grid-cols-3 w-full">
-          {templates.slice(0, 3).map((template) => (
+          {displayedTemplates.map((template) => (
             <div
               key={template.id}
               className={`
@@ -59,8 +73,8 @@ export default function Template() {
                 bg-[rgba(43,43,43,0)]
               hover:bg-[rgba(43,43,43,0.5)]
               border-[#212121]
-                first:border-r
-                last:border-l
+                border-r
+                border-b
                 cursor-pointer
                 `}
             >
