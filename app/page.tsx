@@ -1,6 +1,7 @@
 import HeroBackground from "@/components/background/HeroBackground";
 import ReviewBackground from "@/components/background/ReviewBackground";
 import TemplateBackground from "@/components/background/TemplateBackground";
+import Footer from "@/components/layout/footer";
 import Benefits from "@/features/home/components/Benefits";
 import Demo from "@/features/home/components/Demo";
 import Founder from "@/features/home/components/Founder";
@@ -46,5 +47,7 @@ export default function HomePage() {
     <Founder />
 
     <Review />
+
+    <Footer />
   </main>;
 }

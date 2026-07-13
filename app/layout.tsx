@@ -1,8 +1,7 @@
 import type { Metadata } from "next";
-import { Geist_Mono, Inter } from "next/font/google";
+import { Inter } from "next/font/google";
 import localFont from "next/font/local";
 
-import Footer from "@/components/layout/footer";
 import SmoothScroll from "@/components/providers/SmoothScroll";
 
 import "./globals.css";
@@ -46,12 +45,6 @@ const gambetta = localFont({
   display: "swap",
 });
 
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
-
 export const metadata: Metadata = {
   title: "Browser Clone",
   description: "A browser clone built with Next.js",
@@ -73,7 +66,6 @@ export default function RootLayout({
           <main id="main-content" className="flex flex-1 flex-col overflow-x-hidden">
             {children}
           </main>
-          {/* <Footer /> */}
         </SmoothScroll>
       </body>
     </html>
