@@ -1,10 +1,7 @@
 "use client";
 
-import { useEffect, useState } from "react";
-import BrandPulse from "@/components/animations/BrandPulse";
 import FadeIn from "@/components/animations/FadeIn";
-import Image from "next/image";
-import { FaArrowTrendUp, FaInfinity } from "react-icons/fa6";
+import { FaInfinity } from "react-icons/fa6";
 import { HiTemplate } from "react-icons/hi";
 import { RiGlobalFill } from "react-icons/ri";
 import { LuRefreshCcw } from "react-icons/lu";
@@ -16,25 +13,6 @@ import BundlePriceBackground from "@/components/background/BundlePriceBackground
 
 
 export default function Pricing() {
-
-  const brands = [
-    "/images/brands/lemon-squeezy.avif",
-    "/images/brands/paypal.avif",
-    "/images/brands/cal-com.avif",
-    "/images/brands/stripe.avif",
-    "/images/brands/gimkit.avif",
-  ];
-
-  const [expandedEven, setExpandedEven] = useState(true);
-
-  useEffect(() => {
-    // 0.5 detik animasi + 0.8 detik diam
-    const interval = setInterval(() => {
-      setExpandedEven((prev) => !prev);
-    }, 1300);
-
-    return () => clearInterval(interval);
-  }, []);
 
   return (
     <section className="relative mx-auto w-full max-w-[100vw] overflow-x-hidden overflow-hidden border-b border-[#212121] px-4 tablet:px-6 desktop:px-10 ">
