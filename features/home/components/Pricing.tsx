@@ -76,13 +76,6 @@ export default function Pricing() {
                   Choose a template best suited for you.
                 </p>
               </FadeIn>
-              {/* <span><HiTemplate /></span>
-              <span><RiGlobalFill /></span>
-              <span><LuRefreshCcw /></span>
-              <span><FaInfinity /></span>
-              <span><SiFramer /></span>
-              <span><PiVideoFill /></span>
-              <span><BiSolidShoppingBagAlt /></span> */}
               <FadeIn y={10} blur={0} duration={2} className="h-full space-y-4">
                 <h1 className="text-[#ABABAB] text-[12px] font-bold flex items-center gap-x-2">INCLUDED:</h1>
                 <span className="flex items-center gap-x-2 text-white text-md"><HiTemplate size={22} /> Instant access to chosen template</span>
