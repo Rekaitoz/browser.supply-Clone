@@ -94,7 +94,7 @@ export default function Footer() {
             </p>
           </FadeIn>
           <FadeIn y={13} blur={0} duration={2} className="flex flex-col gap-3">
-            <p className="w-full flex item-center gap-x-3 max-w-xl text-[14px] leading-7 text-[#ABABAB] tablet:text-[14px] tablet:leading-8">
+            <div className="w-full flex item-center gap-x-3 max-w-xl text-[14px] leading-7 text-[#ABABAB] tablet:text-[14px] tablet:leading-8">
               Created by
               <AvatarSwing swingRight={swingRight}>
                 <div className="relative h-8 w-8">
@@ -107,7 +107,7 @@ export default function Footer() {
                 </div>
               </AvatarSwing>
               <span className="text-white">Ramish Aziz</span>
-            </p>
+            </div>
           </FadeIn>
         </section>
       </section>
