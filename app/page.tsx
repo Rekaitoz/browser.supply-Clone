@@ -1,4 +1,5 @@
 import HeroBackground from "@/components/background/HeroBackground";
+import ReviewBackground from "@/components/background/ReviewBackground";
 import TemplateBackground from "@/components/background/TemplateBackground";
 import Benefits from "@/features/home/components/Benefits";
 import Demo from "@/features/home/components/Demo";
@@ -7,6 +8,7 @@ import Framer from "@/features/home/components/Framer";
 import Hero from "@/features/home/components/Hero";
 import Pricing from "@/features/home/components/Pricing";
 import Process from "@/features/home/components/Process";
+import Review from "@/features/home/components/Review";
 import Stats from "@/features/home/components/Stats";
 import Template from "@/features/home/components/Template";
 import Testimonial from "@/features/home/components/Testimonial";
@@ -18,6 +20,8 @@ export default function HomePage() {
     <HeroBackground />
 
     <TemplateBackground />
+
+    <ReviewBackground />
 
     <Hero />
 
@@ -40,5 +44,7 @@ export default function HomePage() {
     <TryQuiz />
 
     <Founder />
+
+    <Review />
   </main>;
 }

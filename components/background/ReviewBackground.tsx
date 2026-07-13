@@ -1,6 +1,6 @@
 import BackgroundImage from "./BackgroundImage";
 
-export default function TemplateBackground() {
+export default function ReviewBackground() {
   return (
     <BackgroundImage
       src="/images/backgrounds/home-1.avif"
@@ -11,13 +11,13 @@ export default function TemplateBackground() {
         absolute
         -z-10
         max-w-none
-        rotate-70
+        rotate-210
         blur-3xl
-        translate-x-[10%]
-        left-1/2
-        top-[1400px]
-        tablet:top-[1200px]
-        desktop:top-[1200px]
+        translate-x-[-20%]
+        tablet:translate-x-0
+        top-[10700px]
+        tablet:top-[7000px]
+        desktop:top-[7600px]
       "
     />
   );
