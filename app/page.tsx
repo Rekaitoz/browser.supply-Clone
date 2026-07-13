@@ -2,6 +2,7 @@ import HeroBackground from "@/components/background/HeroBackground";
 import TemplateBackground from "@/components/background/TemplateBackground";
 import Benefits from "@/features/home/components/Benefits";
 import Demo from "@/features/home/components/Demo";
+import Founder from "@/features/home/components/Founder";
 import Framer from "@/features/home/components/Framer";
 import Hero from "@/features/home/components/Hero";
 import Pricing from "@/features/home/components/Pricing";
@@ -37,5 +38,7 @@ export default function HomePage() {
     <Pricing />
 
     <TryQuiz />
+
+    <Founder />
   </main>;
 }
