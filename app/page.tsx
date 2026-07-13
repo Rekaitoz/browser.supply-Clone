@@ -1,6 +1,6 @@
-import HeroBackground from "@/components/background/HeroBackground";
-import ReviewBackground from "@/components/background/ReviewBackground";
-import TemplateBackground from "@/components/background/TemplateBackground";
+import Home1Background from "@/components/background/Home1Background";
+import Home2Background from "@/components/background/Home2Background";
+import Home3Background from "@/components/background/Home3Background";
 import Footer from "@/components/layout/footer";
 import Benefits from "@/features/home/components/Benefits";
 import Demo from "@/features/home/components/Demo";
@@ -18,11 +18,11 @@ import TryQuiz from "@/features/home/components/TryQuiz";
 export default function HomePage() {
   return <main className="relative overflow-x-hidden overflow-y-hidden">
 
-    <HeroBackground />
+    <Home1Background />
 
-    <TemplateBackground />
+    <Home2Background />
 
-    <ReviewBackground />
+    <Home3Background />
 
     <Hero />
 
@@ -30,7 +30,7 @@ export default function HomePage() {
 
     <Stats />
 
-    <Template />
+    <Template limit={3} />
 
     <Benefits />
 

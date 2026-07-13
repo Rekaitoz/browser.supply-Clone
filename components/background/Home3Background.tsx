@@ -1,6 +1,6 @@
 import BackgroundImage from "./BackgroundImage";
 
-export default function ReviewBackground() {
+export default function Home3Background() {
   return (
     <BackgroundImage
       src="/images/backgrounds/home-1.avif"

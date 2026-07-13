@@ -1,6 +1,6 @@
 import BackgroundImage from "./BackgroundImage";
 
-export default function HeroBackground() {
+export default function Home1Background() {
   return (
     <BackgroundImage
       src="/images/backgrounds/home-1.avif"
