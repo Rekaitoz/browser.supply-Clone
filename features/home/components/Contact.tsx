@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import FadeIn from "@/components/animations/FadeIn";
-import Button from "@/components/Button";
+import Button from "@/components/layout/Button";
 import { templates } from "@/data/templates";
 import { ImSpinner2 } from "react-icons/im";
 

@@ -1,5 +1,5 @@
 import FadeIn from "@/components/animations/FadeIn";
-import Button from "@/components/Button";
+import Button from "@/components/layout/Button";
 import { FaArrowRightLong } from "react-icons/fa6";
 
 export default function Founder() {

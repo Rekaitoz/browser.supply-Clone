@@ -1,6 +1,6 @@
 import FadeIn from "@/components/animations/FadeIn";
 import FadeIn3D from "@/components/animations/FadeIn3D";
-import Button from "@/components/Button";
+import Button from "@/components/layout/Button";
 import { Template } from "@/data/templates";
 import { getBadgeClass } from "@/lib/badge";
 import Image from "next/image";

@@ -1,6 +1,6 @@
 import FadeIn from "@/components/animations/FadeIn";
 import InfiniteTicker from "@/components/animations/InfiniteTicker";
-import Button from "@/components/Button";
+import Button from "@/components/layout/Button";
 import Image from "next/image";
 import { FaArrowRightLong } from "react-icons/fa6";
 

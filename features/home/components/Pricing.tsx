@@ -8,7 +8,7 @@ import { LuRefreshCcw } from "react-icons/lu";
 import { SiFramer } from "react-icons/si";
 import { PiVideoFill } from "react-icons/pi";
 import { BiSolidShoppingBagAlt } from "react-icons/bi";
-import Button from "@/components/Button";
+import Button from "@/components/layout/Button";
 import BundlePriceBackground from "@/components/background/BundlePriceBackground";
 
 

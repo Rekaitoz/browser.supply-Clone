@@ -6,7 +6,7 @@ import { HiX } from "react-icons/hi";
 import { BsTwitterX, BsYoutube } from "react-icons/bs";
 
 import { routes } from "@/config/routes";
-import Button from "../Button";
+import Button from "./Button";
 import { LiaGripLinesSolid } from "react-icons/lia";
 
 export default function Navbar() {

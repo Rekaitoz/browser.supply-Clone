@@ -1,5 +1,5 @@
 import FadeIn from "@/components/animations/FadeIn";
-import Button from "@/components/Button";
+import Button from "@/components/layout/Button";
 
 interface TestimonialProps {
   reverse?: boolean;

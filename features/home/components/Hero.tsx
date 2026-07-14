@@ -3,7 +3,7 @@
 import { heroData } from "@/data/hero";
 import { usePathname } from "next/navigation";
 import FadeIn from "@/components/animations/FadeIn";
-import Button from "@/components/Button";
+import Button from "@/components/layout/Button";
 import { SiFramer } from "react-icons/si";
 
 export default function Hero() {

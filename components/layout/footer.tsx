@@ -2,7 +2,7 @@
 
 import FadeIn from "../animations/FadeIn";
 import { BsTwitterX, BsYoutube } from "react-icons/bs";
-import Button from "../Button";
+import Button from "./Button";
 import Image from "next/image";
 import { useEffect, useState } from "react";
 import AvatarSwing from "../animations/AvatarSwing";
