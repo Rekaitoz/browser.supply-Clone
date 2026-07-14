@@ -40,29 +40,17 @@ export const heroData: Record<string, HeroData> = {
       "View our collection of premium Framer templates and launch your website in hours, not months.",
   },
 
-  "/blog": {
+  "/live": {
+    badge: {
+      text: "LIVE EXAMPLES",
+    },
     title: (
       <>
-        Des<em>i</em>gn ins<em>i</em>ghts
-        <br />
-        & resources
+        R<em>e</em>al s<em>i</em>tes b<em>u</em>ilt fro<em>m</em> a template
       </>
     ),
 
     description:
-      "Articles about Framer, design, and growing your online business.",
-  },
-
-  "/support": {
-    title: (
-      <>
-        We&apos;re h<em>e</em>re
-        <br />
-        to he<em>l</em>p
-      </>
-    ),
-
-    description:
-      "Find tutorials, documentation and frequently asked questions.",
+      "A showcase of real customer websites, live right now, built using my Framer website templates.",
   },
 };
