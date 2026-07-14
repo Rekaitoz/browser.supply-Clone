@@ -1,9 +1,17 @@
 "use client";
 
-import { useEffect } from "react";
+import { useEffect, useRef } from "react";
+import { usePathname } from "next/navigation";
 import Lenis from "lenis";
 
-export default function SmoothScroll({ children }: { children: React.ReactNode }) {
+export default function SmoothScroll({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
+  const pathname = usePathname();
+  const lenisRef = useRef<Lenis | null>(null);
+
   useEffect(() => {
     const lenis = new Lenis({
       duration: 1.4,
@@ -12,20 +20,28 @@ export default function SmoothScroll({ children }: { children: React.ReactNode }
       touchMultiplier: 1.5,
     });
 
+    lenisRef.current = lenis;
+
     let frameId = 0;
 
-    function onFrame(time: number) {
+    function raf(time: number) {
       lenis.raf(time);
-      frameId = requestAnimationFrame(onFrame);
+      frameId = requestAnimationFrame(raf);
     }
 
-    frameId = requestAnimationFrame(onFrame);
+    frameId = requestAnimationFrame(raf);
 
     return () => {
       cancelAnimationFrame(frameId);
       lenis.destroy();
     };
   }, []);
+
+  useEffect(() => {
+    lenisRef.current?.scrollTo(0, {
+      immediate: true,
+    });
+  }, [pathname]);
 
   return <>{children}</>;
 }
