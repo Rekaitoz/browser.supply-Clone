@@ -45,7 +45,7 @@ export default function Included() {
         `}
             >
               <FadeIn y={10} blur={0} duration={1.5}>
-                <h2 className="text-white">
+                <h2 className="text-[#ababab]">
                   {stat.value}
                 </h2>
               </FadeIn>
