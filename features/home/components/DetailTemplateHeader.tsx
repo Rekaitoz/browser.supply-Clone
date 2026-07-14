@@ -1,5 +1,6 @@
 "use client";
 import FadeIn from "@/components/animations/FadeIn";
+import Link from "next/link";
 
 interface Props {
   slug: string | undefined;
@@ -35,7 +36,7 @@ export default function DetailTemplateHeader({ slug }: Props) {
             id="home-heading"
             className="font-gambetta capitalize flex text-[16px] gap-5 desktop:max-w-3xl mx-auto font-medium leading-[1.02] tracking-tight text-white"
           >
-            Home <span>{">"}</span> Templates <span>{">"}</span> {slug}
+            <Link href={"/"} className="hover:text-[#ABABAB] transition duration-200">Home</Link> <span>{">"}</span> <Link href={"/templates"} className="hover:text-[#ABABAB] transition duration-200">Templates</Link> <span>{">"}</span> {slug}
           </h1>
         </FadeIn>
 
