@@ -5,6 +5,7 @@ import { templates } from "@/data/templates";
 import { getBadgeClass } from "@/lib/badge";
 import Image from "next/image";
 import FadeIn3D from "@/components/animations/FadeIn3D";
+import Link from "next/link";
 
 interface TemplateProps {
   showHeader?: boolean;
@@ -60,7 +61,8 @@ export default function Template({
         )}
         <section className="grid grid-cols-1 tablet:grid-cols-3 w-full">
           {displayedTemplates.map((template) => (
-            <div
+            <Link
+              href={`templates/${template.name}`}
               key={template.id}
               className={`
                 group
@@ -127,7 +129,7 @@ export default function Template({
                   </p>
                 </div>
               </FadeIn>
-            </div>
+            </Link>
           ))}
         </section>
       </section>

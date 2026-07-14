@@ -1,7 +1,11 @@
 "use client";
 import FadeIn from "@/components/animations/FadeIn";
 
-export default function DetailTemplateHeader() {
+interface Props {
+  slug: string | undefined;
+}
+
+export default function DetailTemplateHeader({ slug }: Props) {
 
 
   return (
@@ -29,9 +33,9 @@ export default function DetailTemplateHeader() {
         <FadeIn y={10} blur={0} duration={4}>
           <h1
             id="home-heading"
-            className="font-gambetta flex text-[16px] gap-5 desktop:max-w-3xl mx-auto font-medium leading-[1.02] tracking-tight text-white"
+            className="font-gambetta capitalize flex text-[16px] gap-5 desktop:max-w-3xl mx-auto font-medium leading-[1.02] tracking-tight text-white"
           >
-            Home <span>{">"}</span> Templates <span>{">"}</span> Selene
+            Home <span>{">"}</span> Templates <span>{">"}</span> {slug}
           </h1>
         </FadeIn>
 
