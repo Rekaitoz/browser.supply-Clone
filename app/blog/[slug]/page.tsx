@@ -6,13 +6,8 @@ import DetailBlogHeader from "@/features/home/components/DetailBlogHeader";
 import DetailBlogImage from "@/features/home/components/DetailBlogImage";
 import { slugify } from "@/lib/slugify";
 
-import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 
-export const metadata: Metadata = {
-  title: "About | Browser Clone",
-  description: "Learn more about the Browser Clone project.",
-};
 interface Props {
   params: Promise<{
     slug: string;

@@ -46,8 +46,16 @@ const gambetta = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "Browser Clone",
-  description: "A browser clone built with Next.js",
+  title: {
+    default: "Framer Template Bundle: Every Template for $399 | Browser.upply",
+    template: "Framer Template Bundle: Every Template for $399 | Browser.upply",
+  },
+  description: "Professional Framer website templates starting at $99. Trusted by 2000+ customers. Launch your business site in hours with step by step video tutorials.",
+  icons: {
+    icon: "/images/logo/logo-1.avif",
+    shortcut: "/images/logo/logo-1.avif",
+    apple: "/images/logo/logo-1.avif",
+  },
 };
 
 export default function RootLayout({

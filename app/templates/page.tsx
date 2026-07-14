@@ -8,12 +8,6 @@ import Stats from "@/features/home/components/Stats";
 import Template from "@/features/home/components/Template";
 import Testimonial from "@/features/home/components/Testimonial";
 import TryQuiz from "@/features/home/components/TryQuiz";
-import type { Metadata } from "next";
-
-export const metadata: Metadata = {
-  title: "About | Browser Clone",
-  description: "Learn more about the Browser Clone project.",
-};
 
 export default function TemplatesPage() {
   return <main className="relative overflow-x-hidden overflow-y-hidden">

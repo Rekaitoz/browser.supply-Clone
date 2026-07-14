@@ -4,12 +4,6 @@ import Faqs from "@/features/home/components/Faqs";
 import HeroBundle from "@/features/home/components/HeroBundle";
 import Included from "@/features/home/components/Included";
 import Template from "@/features/home/components/Template";
-import type { Metadata } from "next";
-
-export const metadata: Metadata = {
-  title: "About | Browser Clone",
-  description: "Learn more about the Browser Clone project.",
-};
 
 export default function BundlePage() {
   return <main className="relative overflow-x-hidden overflow-y-hidden">

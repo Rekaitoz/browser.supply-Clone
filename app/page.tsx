@@ -16,38 +16,40 @@ import Testimonial from "@/features/home/components/Testimonial";
 import TryQuiz from "@/features/home/components/TryQuiz";
 
 export default function HomePage() {
-  return <main className="relative overflow-x-hidden overflow-y-hidden">
+  return (
+    <main className="relative overflow-x-hidden overflow-y-hidden">
 
-    <Home1Background />
+      <Home1Background />
 
-    <Home2Background />
+      <Home2Background />
 
-    <Home3Background />
+      <Home3Background />
 
-    <Hero />
+      <Hero />
 
-    <Demo />
+      <Demo />
 
-    <Stats />
+      <Stats />
 
-    <Template limit={3} />
+      <Template limit={3} />
 
-    <Benefits />
+      <Benefits />
 
-    <Framer />
+      <Framer />
 
-    <Process />
+      <Process />
 
-    <Testimonial />
+      <Testimonial />
 
-    <Pricing />
+      <Pricing />
 
-    <TryQuiz />
+      <TryQuiz />
 
-    <Founder />
+      <Founder />
 
-    <Review />
+      <Review />
 
-    <Footer />
-  </main>;
+      <Footer />
+    </main>
+  )
 }

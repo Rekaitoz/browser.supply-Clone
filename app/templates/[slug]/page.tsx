@@ -5,18 +5,11 @@ import DetailTemplateHeader from "@/features/home/components/DetailTemplateHeade
 import Faqs from "@/features/home/components/Faqs";
 import Features from "@/features/home/components/Features";
 import Included from "@/features/home/components/Included";
-import NotFound from "@/features/home/components/NotFound";
 import Review from "@/features/home/components/Review";
 import TemplateDetail from "@/features/home/components/TemplateDetail";
 import TryBundle from "@/features/home/components/TryBundle";
-
-import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 
-export const metadata: Metadata = {
-  title: "About | Browser Clone",
-  description: "Learn more about the Browser Clone project.",
-};
 interface Props {
   params: Promise<{
     slug: string;
