@@ -1,16 +1,20 @@
 "use client";
 
 import FadeIn from "@/components/animations/FadeIn";
+import Button from "@/components/layout/Button";
 import { faqsData } from "@/data/faqs";
 import FaqItem from "@/lib/FaqItem";
 import { useState } from "react";
+import { FaArrowRightLong } from "react-icons/fa6";
 
 interface FaqProps {
   showHeader?: boolean;
+  showHeader2?: boolean;
 }
 
 export default function Faqs({
   showHeader = true,
+  showHeader2 = false,
 }: FaqProps) {
   const [openId, setOpenId] = useState<number | null>(null);
 
@@ -44,6 +48,42 @@ export default function Faqs({
                 </p>
               </FadeIn>
             </div>
+          </section>
+        )}
+        {showHeader2 && (
+          <section className="w-full flex flex-col tablet:flex-row gap-8 tablet:items-end justify-between px-5 tablet:px-10 pt-10 tablet:pt-16 desktop:pt-20 pb-10 border-b border-[#212121]">
+            <div className="w-full max-w-lg pt-2 text-left space-y-4">
+              <FadeIn y={-13} blur={0} duration={1} delay={0.5}>
+                <span className="flex w-fit items-center gap-x-2 rounded-sm bg-[radial-gradient(86%_150%_at_47%,#fff0_0%,#fff3_100%)] px-4 py-1.5 text-[12px] font-bold text-[#ababab]">
+                  FAQS
+                </span>
+              </FadeIn>
+              <FadeIn y={13} blur={0} duration={2}>
+                <h1
+                  id="home-heading"
+                  className="font-gambetta text-[38px] tablet:text-[48px] desktop:text-[56px] font-medium leading-[1.02] tracking-tight text-white"
+                >
+                  E<em>v</em>er<em>y</em>thi<em>n</em>g yo<em>u</em><br /><em>n</em>eed to k<em>n</em>o<em>w</em>
+                </h1>
+              </FadeIn>
+
+              <FadeIn y={13} blur={0} duration={2} >
+                <p className="w-full max-w-xl text-[15px] leading-7 text-[#ABABAB] tablet:text-[16px] tablet:leading-8">
+                  Frequently asked questions about the bundle
+                </p>
+              </FadeIn>
+            </div>
+            <FadeIn y={13} blur={0} duration={2}>
+              <Button
+                className="text-[16px] font-bold w-full tablet:w-auto"
+                rounded
+                rightIcon={<FaArrowRightLong size={10} />}
+                textColor="text-black"
+                bgColor="bg-[#ffffff]"
+              >
+                Get the bundle
+              </Button>
+            </FadeIn>
           </section>
         )}
         <section className="flex flex-col w-full">

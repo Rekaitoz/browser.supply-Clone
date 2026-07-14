@@ -10,16 +10,58 @@ import Link from "next/link";
 interface TemplateProps {
   showHeader?: boolean;
   limit?: number;
+  gridColsDesktop?: 1 | 2 | 3 | 4;
+  hideBadge?: boolean;
+  hidePrice?: boolean;
+  hideFutureTemplate?: boolean;
 }
 
 export default function Template({
   showHeader = true,
   limit,
+  gridColsDesktop = 3,
+  hideBadge = false,
+  hidePrice = false,
+  hideFutureTemplate = true,
 }: TemplateProps) {
 
   const displayedTemplates = limit
     ? templates.slice(0, limit)
     : templates;
+
+  const desktopGridClass = {
+    1: "desktop:grid-cols-1",
+    2: "desktop:grid-cols-2",
+    3: "desktop:grid-cols-3",
+    4: "desktop:grid-cols-4",
+  } satisfies Record<number, string>;
+
+
+
+  const AddFutureTemplate = ({ index }: { index: number }) => {
+    return (
+      <div className={`relative aspect-16/10 w-full ${index != 0 ? "hidden desktop:flex" : ''}`}>
+        <div
+          className="
+                    h-full 
+                    w-full
+                    flex
+                    items-center
+                    justify-center
+                    border
+                    bg-[#1414144d]
+                    border-[#212121]
+                    rounded-sm
+                    overflow-hidden
+                    text-white
+                    text-5xl
+                    "
+        >
+          +
+        </div>
+      </div>
+    )
+  }
 
   return (
     <section className="relative mx-auto w-full max-w-[100vw] overflow-x-hidden overflow-hidden border-b border-[#212121] px-4 tablet:px-6 desktop:px-10">
@@ -59,7 +101,7 @@ export default function Template({
             </FadeIn>
           </section>
         )}
-        <section className="grid grid-cols-1 tablet:grid-cols-2 desktop:grid-cols-3 w-full">
+        <section className={`grid grid-cols-1 tablet:grid-cols-2 w-full ${desktopGridClass[gridColsDesktop]}`}>
           {displayedTemplates.map((template) => (
             <Link
               href={`templates/${template.name}`}
@@ -106,7 +148,7 @@ export default function Template({
                   <h2 className="font-gambetta text-[28px] text-white">
                     {template.name}
                   </h2>
-                  {template.badge && (
+                  {(template.badge && !hideBadge) && (
                     <span
                       className={`
                         rounded-sm
@@ -125,14 +167,29 @@ export default function Template({
                   <p>
                     {template.shortDesc}
                   </p>
-                  •
-                  <p>
-                    ${template.price} USD
-                  </p>
+                  {!hidePrice && (
+                    <>
+                      •
+                      <p>
+                        ${template.price} USD
+                      </p>
+                    </>
+                  )}
                 </div>
               </FadeIn>
             </Link>
           ))}
+          {!hideFutureTemplate && (
+            <div className="col-span-1 desktop:col-span-3 p-10 flex flex-col justify-center items-center gap-10 ">
+              <h1 className="flex font-gambetta text-[32px] tablet:text-[28px] desktop:text-[45px] font-medium leading-[1.3] tablet:leading-[1.02] tracking-tight text-white">And all future templates</h1>
+              <div className="w-full h-full flex items-center gap-10">
+                {Array.from({ length: 3 }).map((_, index) => (
+                  <AddFutureTemplate key={`Future_${index}`} index={index} />
+                ))}
+              </div>
+
+            </div>
+          )}
         </section>
       </section>
     </section>
