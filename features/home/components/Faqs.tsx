@@ -2,7 +2,7 @@
 
 import FadeIn from "@/components/animations/FadeIn";
 import Button from "@/components/layout/Button";
-import { faqsData } from "@/data/faqs";
+import { faqs, faqsData } from "@/data/faqs";
 import FaqItem from "@/lib/FaqItem";
 import { useState } from "react";
 import { FaArrowRightLong } from "react-icons/fa6";
@@ -10,11 +10,13 @@ import { FaArrowRightLong } from "react-icons/fa6";
 interface FaqProps {
   showHeader?: boolean;
   showHeader2?: boolean;
+  faqs?: faqs[];
 }
 
 export default function Faqs({
   showHeader = true,
   showHeader2 = false,
+  faqs = faqsData,
 }: FaqProps) {
   const [openId, setOpenId] = useState<number | null>(null);
 
@@ -87,7 +89,7 @@ export default function Faqs({
           </section>
         )}
         <section className="flex flex-col w-full">
-          {faqsData.map((faq) => (
+          {faqs.map((faq) => (
             <FaqItem
               key={faq.id}
               question={faq.question}

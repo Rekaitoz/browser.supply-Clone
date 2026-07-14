@@ -1,7 +1,7 @@
 import FadeIn from "@/components/animations/FadeIn";
 import Button from "@/components/layout/Button";
 import { FaArrowRightLong } from "react-icons/fa6";
-import { templates } from "@/data/templates";
+import { getTemplates } from "@/lib/api";
 import { getBadgeClass } from "@/lib/badge";
 import Image from "next/image";
 import FadeIn3D from "@/components/animations/FadeIn3D";
@@ -16,7 +16,7 @@ interface TemplateProps {
   hideFutureTemplate?: boolean;
 }
 
-export default function Template({
+export default async function Template({
   showHeader = true,
   limit,
   gridColsDesktop = 3,
@@ -24,6 +24,7 @@ export default function Template({
   hidePrice = false,
   hideFutureTemplate = true,
 }: TemplateProps) {
+  const templates = await getTemplates();
 
   const displayedTemplates = limit
     ? templates.slice(0, limit)

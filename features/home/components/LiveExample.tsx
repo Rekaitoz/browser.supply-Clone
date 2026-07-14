@@ -2,11 +2,10 @@ import FadeIn from "@/components/animations/FadeIn";
 import Image from "next/image";
 import FadeIn3D from "@/components/animations/FadeIn3D";
 import Link from "next/link";
-import { liveData } from "@/data/live";
+import { getLive } from "@/lib/api";
 
-
-
-export default function LiveExample() {
+export default async function LiveExample() {
+  const liveData = await getLive();
 
 
   return (

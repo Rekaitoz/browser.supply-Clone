@@ -3,11 +3,15 @@
 import { useState } from "react";
 import FadeIn from "@/components/animations/FadeIn";
 import Button from "@/components/layout/Button";
-import { templates } from "@/data/templates";
+import { Template, templates } from "@/data/templates";
 import { ImSpinner2 } from "react-icons/im";
 
 
-export default function Contact() {
+export default function Contact({
+  templateOptions = templates,
+}: {
+  templateOptions?: Template[];
+}) {
 
   const [form, setForm] = useState({
     firstName: "",
@@ -125,7 +129,7 @@ export default function Contact() {
                 <option value="" disabled className="bg-white text-[#abababb3] ">
                   Select...
                 </option>
-                {templates.map((template) => (
+                {templateOptions.map((template) => (
                   <option
                     key={template.id}
                     value={template.name}

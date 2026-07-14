@@ -3,10 +3,11 @@ import ReviewTicker from "@/components/animations/ReviewTicker";
 import Button from "@/components/layout/Button";
 import Image from "next/image";
 import { FaArrowRightLong, FaStar } from "react-icons/fa6";
-import { reviewData } from "@/data/review";
+import { getReviews } from "@/lib/api";
 import { createTickerRows } from "@/lib/createTickerRow";
 
-export default function Review() {
+export default async function Review() {
+  const reviewData = await getReviews();
 
   interface Review {
     review: string;

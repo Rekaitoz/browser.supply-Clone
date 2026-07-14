@@ -1,6 +1,6 @@
 import Bundle1Background from "@/components/background/Bundle1Background";
 import Footer from "@/components/layout/Footer";
-import Faqs from "@/features/home/components/Faqs";
+import FaqsSection from "@/features/home/components/FaqsSection";
 import HeroBundle from "@/features/home/components/HeroBundle";
 import Included from "@/features/home/components/Included";
 import Template from "@/features/home/components/Template";
@@ -11,7 +11,7 @@ export default function BundlePage() {
     <HeroBundle />
     <Included />
     <Template showHeader={false} gridColsDesktop={4} hideBadge={true} hidePrice={true} hideFutureTemplate={false} limit={5} />
-    <Faqs showHeader={false} showHeader2={true} />
+    <FaqsSection showHeader={false} showHeader2={true} />
     <Footer />
   </main>;
 }

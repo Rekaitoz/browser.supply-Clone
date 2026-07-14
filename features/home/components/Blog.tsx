@@ -1,10 +1,11 @@
 import FadeIn from "@/components/animations/FadeIn";
 import Image from "next/image";
 import Link from "next/link";
-import { blogData } from "@/data/blog";
+import { getBlogs } from "@/lib/api";
 import { slugify } from "@/lib/slugify";
 
-export default function Blog() {
+export default async function Blog() {
+  const blogData = await getBlogs();
 
   {/* <div
   dangerouslySetInnerHTML={{

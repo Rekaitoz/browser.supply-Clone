@@ -1,8 +1,8 @@
 import TemplateDetail1Background from "@/components/background/TemplateDetail1Background";
 import Footer from "@/components/layout/Footer";
-import { templates } from "@/data/templates";
+import { getTemplate } from "@/lib/api";
 import DetailTemplateHeader from "@/features/home/components/DetailTemplateHeader";
-import Faqs from "@/features/home/components/Faqs";
+import FaqsSection from "@/features/home/components/FaqsSection";
 import Features from "@/features/home/components/Features";
 import Included from "@/features/home/components/Included";
 import Review from "@/features/home/components/Review";
@@ -18,12 +18,7 @@ interface Props {
 export default async function TemplateDetailPage({ params }: Props) {
   const { slug } = await params;
 
-  const normalize = (value: string) =>
-    value.trim().toLowerCase();
-
-  const template = templates.find(
-    (item) => normalize(item.name) === normalize(slug)
-  );
+  const template = await getTemplate(slug);
 
   if (!template) {
     notFound();
@@ -38,7 +33,7 @@ export default async function TemplateDetailPage({ params }: Props) {
     <TryBundle />
     <Included />
     <Review />
-    <Faqs />
+    <FaqsSection />
     <Footer />
   </main>;
 }
