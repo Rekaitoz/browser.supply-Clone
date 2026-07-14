@@ -57,7 +57,7 @@ export default function Hero() {
           </FadeIn>
         )}
 
-        <div className="mx-auto max-w-5xl pt-2 text-center">
+        <div className="mx-auto max-w-5xl pt-8 text-center">
           <FadeIn y={10} blur={8} duration={4}>
             <h1
               className="

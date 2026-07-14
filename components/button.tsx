@@ -5,6 +5,8 @@ interface ButtonProps {
     children: ReactNode;
     onClick?: () => void;
     href?: string;
+    type?: "submit" | "button" | "reset"
+    disabled?: boolean;
     // Style
     className?: string;
     bgColor?: string;
@@ -24,6 +26,8 @@ export default function Button({
     children,
     onClick,
     href,
+    type = "button",
+    disabled = false,
     className = "",
     bgColor = "bg-transparent",
     textColor = "text-white",
@@ -38,7 +42,7 @@ export default function Button({
 
     const content = (
         <>
-            {animation ? (
+            {animation && !disabled ? (
                 <div className="h-6 overflow-hidden">
                     <div className="flex flex-col transition-transform duration-300 ease-in-out group-hover:-translate-y-6">
                         <span className="h-6 leading-6">{children}</span>
@@ -90,8 +94,10 @@ export default function Button({
 
     return (
         <button
+            type={type}
             onClick={onClick}
             className={classes}
+            disabled={disabled}
         >
             {content}
         </button>

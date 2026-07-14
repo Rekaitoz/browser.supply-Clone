@@ -46,11 +46,24 @@ export const heroData: Record<string, HeroData> = {
     },
     title: (
       <>
-        R<em>e</em>al s<em>i</em>tes b<em>u</em>ilt fro<em>m</em> a template
+        R<em>e</em>al s<em>i</em>tes b<em>u</em>ilt fro<em>m</em> a te<em>m</em>plate
       </>
     ),
 
     description:
       "A showcase of real customer websites, live right now, built using my Framer website templates.",
+  },
+  "/support": {
+    badge: {
+      text: "SUPPORT",
+    },
+    title: (
+      <>
+        He<em>r</em>e to h<em>e</em>lp<br />w<em>h</em>en <em>y</em>ou nee<em>d</em>
+      </>
+    ),
+
+    description:
+      "Do you have any trouble or questions? Check out the FAQs below or scroll a little further to contact me directly",
   },
 };
