@@ -1,5 +1,5 @@
 import Bundle1Background from "@/components/background/Bundle1Background";
-import Footer from "@/components/layout/FooterTemp";
+import Footer from "@/components/layout/Footer";
 import FaqsSection from "@/features/home/components/FaqsSection";
 import HeroBundle from "@/features/home/components/HeroBundle";
 import Included from "@/features/home/components/Included";
