@@ -48,6 +48,7 @@ export default function Framer() {
           </div>
           <FadeIn y={13} blur={0} duration={1} delay={0.9} className="flex flex-col mt-7 tablet:flex-row gap-4 w-full">
             <Button
+              href="/templates"
               className="text-[16px] font-bold w-full tablet:w-auto"
               rounded
               textColor="text-black"
@@ -56,6 +57,7 @@ export default function Framer() {
               Browse Template
             </Button>
             <Button
+              exLink="https://framer.link/ramishdesign"
               className="text-[16px] font-bold w-full tablet:w-auto"
               rounded
               textColor="text-white"

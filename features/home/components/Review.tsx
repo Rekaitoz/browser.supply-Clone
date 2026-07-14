@@ -82,6 +82,7 @@ export default function Review() {
           </div>
           <FadeIn y={13} blur={0} duration={2}>
             <Button
+              href="/live"
               className="text-[16px] font-bold w-full tablet:w-auto"
               rounded
               rightIcon={<FaArrowRightLong size={10} />}

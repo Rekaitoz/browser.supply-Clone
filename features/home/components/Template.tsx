@@ -90,6 +90,7 @@ export default function Template({
             </div>
             <FadeIn y={13} blur={0} duration={2}>
               <Button
+                href="/templates"
                 className="text-[16px] font-bold w-full tablet:w-auto"
                 rounded
                 rightIcon={<FaArrowRightLong size={10} />}

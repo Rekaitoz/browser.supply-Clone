@@ -64,6 +64,7 @@ export default function Pricing() {
             </div>
             <FadeIn y={13} blur={0} duration={1} delay={0.9}>
               <Button
+                href="/templates"
                 className="text-[16px] font-bold w-full"
                 rounded
                 textColor="text-white"

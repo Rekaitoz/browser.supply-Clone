@@ -114,6 +114,7 @@ export default function Founder() {
           </div>
           <FadeIn y={10} blur={0} duration={1} className="flex flex-col tablet:flex-row gap-4 w-full">
             <Button
+              exLink="https://cal.com/ramish-design/mentoring"
               className="text-[16px] font-bold w-full"
               rightIcon={<FaArrowRightLong size={10} />}
               textColor="text-black"

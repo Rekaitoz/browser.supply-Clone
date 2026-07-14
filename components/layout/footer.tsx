@@ -18,9 +18,9 @@ export default function Footer() {
       { href: "/blog", label: "Blog" },
     ],
     [
-      { href: "/quiz", label: "Quiz" },
+      { href: "/", label: "Quiz" },
       { href: "/support", label: "Support" },
-      { href: "/privacy", label: "Privacy" },
+      { href: "/", label: "Privacy" },
     ]
   ];
 
@@ -51,14 +51,28 @@ export default function Footer() {
               Launch your online business with a<br />premium Framer website template.
             </p>
             <span className="flex justify-center tablet:justify-start items-center gap-x-5">
-              <BsTwitterX size={16} aria-hidden />
-              <BsYoutube size={20} aria-hidden />
+              <a
+                href="https://x.com/ramishdotdesign"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Twitter"
+              >
+                <BsTwitterX size={16} aria-hidden />
+              </a>
+              <a
+                href="https://www.youtube.com/@ramish.design"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Youtube"
+              >
+                <BsYoutube size={20} aria-hidden />
+              </a>
             </span>
           </FadeIn>
           <FadeIn y={13} blur={0} duration={2} className="flex flex-col tablet:flex-row gap-9">
             <ul className="flex flex-col items-center tablet:items-start gap-1">
               {routes[0].map(({ href, label }) => (
-                <li key={href}>
+                <li key={label}>
                   <Button
                     className="text-[16px] font-semibold"
                     paddingX="px-2"
@@ -72,7 +86,7 @@ export default function Footer() {
             </ul>
             <ul className="flex flex-col items-center tablet:items-start gap-1">
               {routes[1].map(({ href, label }) => (
-                <li key={href}>
+                <li key={label}>
                   <Button
                     className="text-[16px] font-semibold"
                     paddingX="px-2"
@@ -90,7 +104,7 @@ export default function Footer() {
         <section className="w-full flex flex-col items-center tablet:flex-row justify-between gap-8 px-5 tablet:px-5 desktop:px-10 py-5 border-b border-[#212121]">
           <FadeIn y={13} blur={0} duration={2} className="flex flex-col gap-3">
             <p className="w-full max-w-xl text-[14px] leading-7 text-[#ABABAB] tablet:text-[14px] tablet:leading-8">
-              © 2026 browser.supply. <span className="text-white">Framer</span> website templates
+              © 2026 browser.supply. <a href="https://framer.link/ramishdesign" className="text-white">Framer</a> website templates
             </p>
           </FadeIn>
           <FadeIn y={13} blur={0} duration={2} className="flex flex-col gap-3">
@@ -106,7 +120,7 @@ export default function Footer() {
                   />
                 </div>
               </AvatarSwing>
-              <span className="text-white">Ramish Aziz</span>
+              <a href="https://x.com/ramishdotdesign" className="text-white">Ramish Aziz</a>
             </div>
           </FadeIn>
         </section>

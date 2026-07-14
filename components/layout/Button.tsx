@@ -5,6 +5,7 @@ interface ButtonProps {
     children: ReactNode;
     onClick?: () => void;
     href?: string;
+    exLink?: string;
     type?: "submit" | "button" | "reset"
     disabled?: boolean;
     // Style
@@ -26,6 +27,7 @@ export default function Button({
     children,
     onClick,
     href,
+    exLink,
     type = "button",
     disabled = false,
     className = "",
@@ -89,6 +91,16 @@ export default function Button({
             >
                 {content}
             </Link>
+        );
+    }
+    else if (exLink) {
+        return (
+            <a
+                href={exLink}
+                className={classes}
+            >
+                {content}
+            </a>
         );
     }
 

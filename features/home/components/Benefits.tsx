@@ -80,7 +80,7 @@ export default function Benefits() {
             </FadeIn>
           </section>
           <section>
-            <div className="p-5 space-y-5 border-b border-[#212121]">
+            <FadeIn y={10} blur={0} duration={2} className="p-5 space-y-5 border-b border-[#212121]">
               <div className="flex items-center gap-x-3 h-10">
                 {brands.map((brand, index) => (
                   <BrandPulse
@@ -102,14 +102,14 @@ export default function Benefits() {
                 <h1 className="text-[#ABABAB] text-[11px] font-bold flex items-center gap-x-2"><FaArrowTrendUp className="text-[#33d478]" size={25} /> CONVERT MORE</h1>
                 <p className="text-white text-[13px] tablet:text-[15px]">Designed to turn web visitors into customers.</p>
               </div>
-            </div>
-            <div className="flex flex-col p-5">
+            </FadeIn>
+            <FadeIn y={10} blur={0} duration={2} className="flex flex-col p-5">
               <p className="text-white text-[13px] tablet:text-[15px]">Building a high-quality website<br />shouldn&apos;t cost you a fortune.</p>
               <span className="w-full bg-[#1a1a1a] p-2.5 rounded-sm text-[11px] tablet:text-[12px] font-bold mt-5 text-white">$5,000 – $20,000 </span>
               <p className="text-[#ABABAB] text-[11px] font-bold  mt-3">WEB DESIGNER / AGENCY</p>
               <span className="w-fit bg-[#ffffff4d] p-2.5 pr-6 rounded-sm text-[11px] tablet:text-[12px] font-bold mt-5 text-white">STARTING AT $99</span>
               <p className="text-[#ABABAB] text-[11px] font-bold  mt-3">FRAMER TEMPLATE</p>
-            </div>
+            </FadeIn>
             <div>
 
             </div>

@@ -52,7 +52,7 @@ export default function Navbar() {
               paddingY="py-2"
               className="truncate text-[16px] font-semibold tracking-tight text-white"
             >
-              Browser.clone
+              Browser.supply
             </Button>
           </div>
 
@@ -77,9 +77,24 @@ export default function Navbar() {
           </nav>
 
           <div className="hidden items-center gap-x-4 tablet:flex">
-            <BsTwitterX size={20} aria-hidden />
-            <BsYoutube size={24} aria-hidden />
+            <a
+              href="https://x.com/ramishdotdesign"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Twitter"
+            >
+              <BsTwitterX size={20} aria-hidden />
+            </a>
+            <a
+              href="https://www.youtube.com/@ramish.design"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Youtube"
+            >
+              <BsYoutube size={24} aria-hidden />
+            </a>
             <Button
+              href="/bundle"
               className="text-[16px] font-bold"
               paddingX="px-4"
               paddingY="py-2"
@@ -96,7 +111,7 @@ export default function Navbar() {
             aria-expanded={isOpen}
             aria-controls="mobile-navigation"
             onClick={() => setIsOpen((open) => !open)}
-            className="flex h-10 w-10 shrink-0 items-center justify-center rounded-md text-white transition-colors hover:bg-white/10 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white tablet:hidden"
+            className="flex h-10 w-10 shrink-0 items-center justify-center rounded-md text-white transition-colors hover:bg-white/10 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white tablet:hidden"
           >
             {isOpen ? <HiX size={24} /> : <LiaGripLinesSolid size={42} />}
           </button>
@@ -128,11 +143,26 @@ export default function Navbar() {
           </ul>
 
           <div className="mt-4 flex items-center gap-x-5 px-1 ">
-            <BsTwitterX size={20} aria-hidden />
-            <BsYoutube size={24} aria-hidden />
+            <a
+              href="https://x.com/ramishdotdesign"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Twitter"
+            >
+              <BsTwitterX size={20} aria-hidden />
+            </a>
+            <a
+              href="https://www.youtube.com/@ramish.design"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Youtube"
+            >
+              <BsYoutube size={24} aria-hidden />
+            </a>
           </div>
 
           <Button
+            href="/bundle"
             className="mt-10 w-full text-[15px] font-bold"
             rounded
             bgColor="bg-[#fff]"

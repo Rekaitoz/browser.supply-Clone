@@ -1,8 +1,6 @@
 import Support1Background from "@/components/background/Support1Background";
 import Footer from "@/components/layout/Footer";
 import Blog from "@/features/home/components/Blog";
-import Contact from "@/features/home/components/Contact";
-import Faqs from "@/features/home/components/Faqs";
 import Hero from "@/features/home/components/Hero";
 import type { Metadata } from "next";
 
@@ -16,8 +14,6 @@ export default function BlogPage() {
         <Support1Background />
         <Hero />
         <Blog />
-        <Faqs showHeader={false} />
-        <Contact />
         <Footer />
     </main>;
 }
