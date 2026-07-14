@@ -1,5 +1,5 @@
 import Support1Background from "@/components/background/Support1Background";
-import Footer from "@/components/layout/Footer";
+import Footer from "@/components/layout/FooterTemp";
 import Blog from "@/features/home/components/Blog";
 import Hero from "@/features/home/components/Hero";
 

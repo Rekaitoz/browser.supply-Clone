@@ -5,7 +5,7 @@ import localFont from "next/font/local";
 import SmoothScroll from "@/components/providers/SmoothScroll";
 
 import "./globals.css";
-import Navbar from "@/components/layout/Navbar";
+import Navbar from "@/components/layout/NavbarTemp";
 
 const inter = Inter({
   variable: "--font-inter",

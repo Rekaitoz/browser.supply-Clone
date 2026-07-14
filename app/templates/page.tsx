@@ -1,6 +1,6 @@
 import Template1Background from "@/components/background/Template1Background";
 import Template2Background from "@/components/background/Template2Background";
-import Footer from "@/components/layout/Footer";
+import Footer from "@/components/layout/FooterTemp";
 import FaqsSection from "@/features/home/components/FaqsSection";
 import Hero from "@/features/home/components/Hero";
 import Pricing from "@/features/home/components/Pricing";

@@ -1,5 +1,5 @@
 import TemplateDetail1Background from "@/components/background/TemplateDetail1Background";
-import Footer from "@/components/layout/Footer";
+import Footer from "@/components/layout/FooterTemp";
 import DetailBlogContent from "@/features/home/components/DetailBlogContent";
 import DetailBlogHeader from "@/features/home/components/DetailBlogHeader";
 import DetailBlogImage from "@/features/home/components/DetailBlogImage";

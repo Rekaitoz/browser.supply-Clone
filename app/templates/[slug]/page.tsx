@@ -1,5 +1,5 @@
 import TemplateDetail1Background from "@/components/background/TemplateDetail1Background";
-import Footer from "@/components/layout/Footer";
+import Footer from "@/components/layout/FooterTemp";
 import { getTemplate } from "@/lib/api";
 import DetailTemplateHeader from "@/features/home/components/DetailTemplateHeader";
 import FaqsSection from "@/features/home/components/FaqsSection";
