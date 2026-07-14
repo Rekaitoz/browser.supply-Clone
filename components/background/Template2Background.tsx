@@ -15,8 +15,8 @@ export default function Template2Background() {
         blur-3xl
         translate-x-[-20%]
         tablet:translate-x-0
-        top-[6700px]
-        tablet:top-[3000px]
+        top-[6000px]
+        tablet:top-[3800px]
         desktop:top-[3600px]
       "
     />

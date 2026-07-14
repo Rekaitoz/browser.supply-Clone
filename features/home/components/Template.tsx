@@ -59,7 +59,7 @@ export default function Template({
             </FadeIn>
           </section>
         )}
-        <section className="grid grid-cols-1 tablet:grid-cols-3 w-full">
+        <section className="grid grid-cols-1 tablet:grid-cols-2 desktop:grid-cols-3 w-full">
           {displayedTemplates.map((template) => (
             <Link
               href={`templates/${template.name}`}
@@ -67,8 +67,10 @@ export default function Template({
               className={`
                 group
                 flex flex-col
-                px-8
-                py-10
+                px-5
+                tablet:px-8
+                py-5
+                tablet:py-10
                 transition-colors
                 duration-300
                 gap-8
@@ -101,7 +103,7 @@ export default function Template({
 
               <FadeIn y={10} blur={0} duration={1.5} className="space-y-3">
                 <div className="flex items-center gap-x-5">
-                  <h2 className="font-gambetta text-[32px] tablet:text-[36px] desktop:text-[28px] text-white">
+                  <h2 className="font-gambetta text-[28px] text-white">
                     {template.name}
                   </h2>
                   {template.badge && (
@@ -119,7 +121,7 @@ export default function Template({
                     </span>
                   )}
                 </div>
-                <div className="flex items-center gap-x-5 font-bold text-[12px] tablet:text-[12px] text-[#ababab]">
+                <div className="flex items-center gap-x-5 font-bold text-[12px] text-[#ababab]">
                   <p>
                     {template.shortDesc}
                   </p>
