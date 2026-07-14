@@ -66,4 +66,17 @@ export const heroData: Record<string, HeroData> = {
     description:
       "Do you have any trouble or questions? Check out the FAQs below or scroll a little further to contact me directly",
   },
+  "/blog": {
+    badge: {
+      text: "BLOG",
+    },
+    title: (
+      <>
+        W<em>h</em>e<em>r</em>e Fra<em>m</em>er m<em>ee</em>ts bus<em>i</em>ness
+      </>
+    ),
+
+    description:
+      "Weekly posts by the creator behind 2,000+ template sales.",
+  },
 };
